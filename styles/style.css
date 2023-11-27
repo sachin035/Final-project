@@ -1654,8 +1654,14 @@ button {
 }
 
 .quote {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #17c2ec;
   border-radius: 50px;
+  padding-left: 241px;
+  padding-right: 241px;
 }
 .quote__title {
   color: #fff;
@@ -1709,7 +1715,7 @@ button {
 }
 
 .background-imagefooter {
-  background-image: url("/assets/images/footer.png");
+  background-image: url("../assets/images/footer.png");
   max-width: 100%;
   max-height: 100%;
   position: relative;
@@ -1737,8 +1743,8 @@ button {
     font-size: 25.5px;
     align-self: flex-start;
   }
-  .footer__nav ul {
-    justify-content: none;
+  .footer__navcontainer {
+    display: flex;
     align-self: flex-start;
   }
   .footer__icon {
@@ -1757,13 +1763,13 @@ button {
     font-size: 18px;
     align-self: flex-start;
   }
-  .footer__nav {
+  .footer__navcontainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .footer__nav ul {
+  .footer__navcontainer ul {
     justify-content: none;
     align-self: flex-start;
   }
@@ -1794,61 +1800,6 @@ button {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-}
-
-.quote {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #17c2ec;
-  border-radius: 50px;
-  padding-left: 241px;
-  padding-right: 241px;
-}
-.quote__title {
-  color: #fff;
-  text-align: center;
-  font-size: 48px;
-  font-weight: 700;
-  padding-top: 70px;
-}
-.quote__info {
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-  font-family: 500;
-  margin-top: 20px;
-}
-.quote__mailinput {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 40px;
-  padding-bottom: 107px;
-}
-.quote__mailinput input {
-  border-radius: 30px 0px 0px 30px;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 28.5px 0;
-  width: 450px;
-  height: 75px;
-}
-.quote__mailinput input::placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-}
-.quote__iconwrapper {
-  border-radius: 0px 30px 30px 0px;
-  background: #0b153c;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
-  width: 100px;
-  height: 75px;
-  padding: 18px 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
