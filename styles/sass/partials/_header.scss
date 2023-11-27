@@ -1,0 +1,43 @@
+.header {
+  @include flex(row, space-between);
+  padding-top: 41px;
+  &__title {
+    @include font(32px, 700);
+    color: $white;
+  }
+  &__nav {
+    @include flex(row, space-between);
+    gap: 25px;
+    &--item {
+      color: $grey;
+    }
+  }
+  &__hamburgermenu {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+      margin: auto;
+      &__nav {
+        display: none;
+      }
+      &__hamburgermenu {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .header {
+      margin: 0px 0px;
+      &__nav {
+        display: none;
+      }
+      &__hamburgermenu {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}

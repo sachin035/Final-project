@@ -1,0 +1,12 @@
+.bg {
+  width: 100%;
+
+  &__imgwrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      z-index: -99;
+    }
+  }
+}

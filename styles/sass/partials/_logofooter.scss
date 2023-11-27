@@ -1,0 +1,44 @@
+.bg-color {
+  background: rgba(97, 95, 95, 0.5);
+  padding-top: 45.24px;
+  padding-bottom: 38.37px;
+}
+.logo {
+  @include flex(row, space-between);
+  gap: 48.11px;
+  &__imgwrapper {
+    width: 288.667px;
+    height: 66.393px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    gap: 24.74px;
+    &__imgwrapper {
+      width: 148.444px;
+      height: 34.142px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .logo {
+    gap: 12.08px;
+    &__imgwrapper {
+      width: 72.483px;
+      height: 16.671px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

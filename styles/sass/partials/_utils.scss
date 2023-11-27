@@ -1,0 +1,30 @@
+.container {
+  max-width: 1299px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+    padding: 0px 40px;
+  }
+  @media screen and (max-width: 576px) {
+    max-width: 576px;
+    padding: 0px 35px;
+  }
+}
+// .bg-image__imgwrapper {
+//   max-width: 1440px;
+//   background-image: url("/assets/images/unsplash_SfDofjXtxHE.png");
+// }
+.bg-image {
+  max-width: 100%;
+  &__imgwrapper {
+    // max-width: 1440px;
+    background-image: url("/assets/images/unsplash_SfDofjXtxHE.png");
+  }
+
+  @media screen and (max-width: 576px) {
+    &__imgwrapper {
+      background-image: url("/assets/images/mobilevaccine.png");
+    }
+  }
+}

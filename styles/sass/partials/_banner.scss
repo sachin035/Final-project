@@ -1,0 +1,243 @@
+.banner {
+  // margin-top: 109px;
+  &__leftrightcontainer {
+    @include flex(row, space-between);
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+
+  &__left {
+    width: 50%;
+  }
+  &__caption {
+    color: $primary-color;
+  }
+  &__title {
+    color: $white;
+    @include font(48px, 800);
+    margin-top: 40px;
+    span {
+      color: $primary-color;
+    }
+  }
+  &__info {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: start;
+    max-width: 603px;
+    margin-top: 40px;
+  }
+  &__button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__right {
+    flex-basis: 45%;
+    position: relative;
+    padding: 0 40px;
+    &--images {
+      position: relative;
+      @mixin side-image {
+        background-color: #fff;
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+      }
+      img {
+        // max-width: 100%;
+      }
+
+      .left__side--images {
+        @include side-image;
+        @include center-vertically;
+        left: -45px;
+        img {
+          @include center-element;
+          // max-width: 100%;
+        }
+      }
+
+      .right__side--images {
+        @include side-image;
+        @include center-vertically;
+        right: -45px;
+        img {
+          @include center-element;
+        }
+      }
+    }
+
+    &--specialists {
+      // @include d-flex(row);
+      display: flex;
+      justify-content: self-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 80%;
+      position: relative;
+      left: -50px;
+      bottom: 60px;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(196, 196, 196, 0.2);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      .specialists--text {
+        // @include font-customizer(700, #fff);
+        font-weight: 700;
+        color: $white;
+        .light-blue {
+          color: $primary-color;
+          display: block;
+        }
+      }
+    }
+  }
+
+  //   schdeule vitra ko
+
+  &__top {
+    @include flex(row, flex-start);
+    gap: 19.98px;
+  }
+  &__iconwrapper {
+    width: 49.962px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0.1);
+    img {
+      width: 29.977px;
+      height: 30px;
+    }
+  }
+  &__infoschedule {
+    color: $white;
+  }
+
+  &__bottom {
+    @include flex(row, space-between);
+    gap: 49.96px;
+    border-radius: 20px 20px 0px 0px;
+    background: rgba(77, 75, 75, 0.05);
+    margin-top: 19px;
+    height: 160px;
+  }
+
+  &__location {
+    @include flex(row, space-between);
+    gap: 20px;
+  }
+  &__details {
+    &--title {
+      color: $grey;
+    }
+    &--info {
+      color: $white;
+    }
+  }
+  &__date {
+    @include flex(row, space-between);
+    gap: 20px;
+  }
+  &__vaccine {
+    @include flex(row, space-between);
+    gap: 20px;
+  }
+  &__iconwrapper {
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0.1);
+    width: 49.962px;
+    height: 50px;
+    padding: 10px 10px;
+    img {
+      width: 29.977px;
+      height: 30px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__caption {
+      font-size: 18px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__info {
+      font-size: 20px;
+    }
+    &__right {
+      width: 100%;
+    }
+
+    &__leftrightcontainer {
+      @include flex(column, center);
+      gap: 55px;
+    }
+    &__left {
+      align-self: flex-start;
+    }
+
+    .banner__right--images .right__side--images {
+      right: -5px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__caption {
+      font-size: 12px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__info {
+      font-size: 14px;
+    }
+
+    &__right {
+      &--images {
+        @mixin side-image {
+          background-color: #fff;
+          width: 100px;
+          height: 100px;
+          border-radius: 20px;
+        }
+        img {
+          max-width: 100%;
+        }
+
+        .left__side--images {
+          background-color: $white;
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          left: -20px;
+        }
+
+        .right__side--images {
+          background-color: #fff;
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          right: -45px;
+        }
+      }
+
+      &--specialists {
+        max-width: 100%;
+
+        .specialists--text {
+          .light-blue {
+            color: $primary-color;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
